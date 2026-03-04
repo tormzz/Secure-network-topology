@@ -49,3 +49,7 @@ All departments can communicate as intended, while maintaining proper isolation 
 - Inter-vlan routing
 - IP planning
 - Network troubleshooting and testing.
+
+## Lab File
+You can download the Cisco Packet Tracer lab file to try it yourself
+[small secure network topology.pkt.zip](https://github.com/user-attachments/files/25741494/small.secure.network.topology.pkt.zip)
