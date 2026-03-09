@@ -1,6 +1,8 @@
-# Small Organnization Secure-network-topology
+# Small Organization Secure-network-topology
 ## Project Overview
-This topology is designed to secure the internal netwrok using VLAN Segmentation and Access Control Lists while applying the principle of Least Privilege using Cisco Packet Tracer. The goal was to simulate how devices in an organization communicate with each other while keeping the network organized and secure.
+This project demonstrates how a small computer network can be designed, configured, and secured using Cisco Packet Tracer.
+
+The goal was to simulate how devices in an organization communicate with each other while keeping the network organized and secure.
 
 In this project, I created multiple Virtual Local Area Networks(VLANs), configured routers and switches, and applied Access Control Lists (ACLs) to control which devices are allowed to communicate.
 
@@ -15,6 +17,11 @@ The simulation helps show how real company networks are built and managed.
 * 1 Router
 * 1 Switch
 Each department is assigned a seperate VLAN for security and trafffic management.
+
+Each device was connected using  appropriate cables to simulate how devices would connect in a real office enviroment.
+
+The purpose of the design was to seperate different departments into their own networks while still allowing controlled communication between them.
+
 ## Network Topology
 Network Topology <img width="1440" height="900" alt="topology1" src="https://github.com/user-attachments/assets/f3a8d82c-4db0-4278-a9f1-531d7e128749" />
 <img width="1440" height="900" alt="topology" src="https://github.com/user-attachments/assets/ad56a4b8-11eb-48fc-b26c-b322238894c4" />
