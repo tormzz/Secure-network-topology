@@ -76,7 +76,8 @@ For example:
 - Vlan 20 - Management
 - Vlan 30 - Staff
 
-|code| 
+code:
+
 - enable
 - configure terminal 
 - vlan 10 
@@ -87,8 +88,79 @@ For example:
 - name Staff
 
 this configuration creates three Vlans and asigns them names corresponding to deprtments within the organization.
-- unused ports disabled
-- Basic password security on Switches and Routers
+
+- ## Assigning Switch ports to VLANs
+After creating VLANs, switch ports were assigned to specific VLANs so that devices connected to those ports sutomatically become members of the appropriate netwrok segment.
+Port Assignment Example
+
+* interface fastEthernet0/1
+* switchport mode access
+* switchport access vlan 10
+
+* interface fastethernet0/2
+* switchport mode access 
+* switchport access vlan 20
+
+* interface fastethernet0/3
+* switchport mode access
+* switchport access vlan 30
+
+This ensures that devices connected to each port belong to their designated department network.
+
+
+  
+- ## Inter-vlan Routing
+Since devices in different vlans cannot coomunicate directly, a router was configured to allow controlled communication between VLANs.
+
+This process is known as Inter-vlan routing and allows departments to share resources when necessary while maintaining segmentation.
+
+Router Configuration
+
+* interface g0/0.10
+* encapsulation dot1Q 10
+* ip address 192.168.10.1 255.255.255.0
+
+* interface g0/0.20
+* encapsulation dot1Q 20
+* ip address 192.168.20.1 255.255.255.0
+
+* interface g0/0.30
+* encapsualtion dot1Q 30
+* ip address 192.168.30.1 255.255.255.0
+
+Each VLAN receives its own gateway for comunication between networks.
+
+- ## Password Protection
+Basic password security was implemented on routers and switches to prevent unauthorized configuration access.
+* enable
+* conf t
+* password cisco
+
+this ensures that only authorized adminstrators can manage network devices.
+
+- ## Banner MOTD
+A message of the day (motd) banner was configured to warn users that the system is restricted.
+
+* banner motd # only authorized users are able to access this router #
+
+This message appears whenever someone attempts to access the device.
+
+- ## Testing and verification
+Devices within the same VLAN were tested for communication using ping commands.
+
+- ## Connectivity Testing
+Devices within the same VLAN were tested for communication using ping commands.
+Example:
+ping 192.168.20.2
+
+- ## Network Validation
+The following checks were performed:
+- Devices within the same VLAN communicate successfully
+- inter-vlan communication works through the router
+- Disabled ports remain inactive
+- Login authentication and MOTD banner appear correctly
+
+
 
 ## Conclusion
 The network was Successfully implemented according to the lab scenerio.
