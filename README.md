@@ -1,6 +1,11 @@
 # Small Organnization Secure-network-topology
 ## Project Overview
-This topology is designed to secure the internal netwrok using VLAN Segmentation and Access Control Lists while applying the principle of Least Privilege.
+This topology is designed to secure the internal netwrok using VLAN Segmentation and Access Control Lists while applying the principle of Least Privilege using Cisco Packet Tracer. The goal was to simulate how devices in an organization communicate with each other while keeping the network organized and secure.
+
+In this project, I created multiple Virtual Local Area Networks(VLANs), configured routers and switches, and applied Access Control Lists (ACLs) to control which devices are allowed to communicate.
+
+The simulation helps show how real company networks are built and managed.
+
 # Network scenerio
  The organization consists of:
 * IT Department (1PC, 1 SERVER)
@@ -28,11 +33,26 @@ Network Topology <img width="1440" height="900" alt="topology1" src="https://git
 | Staff            | 192.168.30.0|255.255.255.0  |30      |
 | External Network | 10.10.10.0  |255.0.0.0      |        |
 ## VLAN Configuration
+VLAN stands for Virtual Local Area Network
+Instaed of having every computer on the same neetwrok, Vlans allow devices to be grouped logically. 
+This improves both security and netwrok performance.
+For example,
+- VLAN 10 - IT
+- VLAN 20 - Management 
+- VLAN 30 - Staff
+  
+Each VLAN acts like its own small network even though they are connected to the same switch.
+
 VLAN Configuration<img width="1440" height="900" alt="vlan-config" src="https://github.com/user-attachments/assets/37d907d5-ec57-4ca3-8a74-11a81d080513" />
 <img width="1440" height="900" alt="vlan-config2" src="https://github.com/user-attachments/assets/7b08d7fc-1e6d-4d49-b004-36680feee785" />
 VLANs were configured on switches to isolate traffic between departments.
 
 ## Routing Configuration
+A router was configured to allow communication between the different VLANs. 
+This process is called Inteer-VLAN Routing.
+Without the router, devices in different VLANs would not be able to communicate with each other.
+The router acts like a traffic controller, directing data between networks.
+
 Router config <img width="1440" height="900" alt="router-config" src="https://github.com/user-attachments/assets/09f7969c-61d0-4d00-8228-dc810ae15073" />
 
 ## Security Measures
