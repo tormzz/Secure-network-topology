@@ -63,7 +63,30 @@ The router acts like a traffic controller, directing data between networks.
 Router config <img width="1440" height="900" alt="router-config" src="https://github.com/user-attachments/assets/09f7969c-61d0-4d00-8228-dc810ae15073" />
 
 ## Security Measures
-- VLAN Segmentation for department isolation
+To ensure the network remains secure and properly controlled, several security mechanismswere implimented on the switches and routers.  These configurations help protect and infrastructure from unauthorized access, prevent misuse of network resourcesm, and enforce administrative control over the devices.
+
+- ## VLAN Segmentation for department isolation
+  
+The network was divided into multiple Virtual Local Area Networks. VLANs logically seperate devices into different departments even though they share the same physical switch.
+
+This improves  netwrok organization and security because devices in one department cannot freely communicate with devices in another department explicitly allowed through routing.
+
+For example:
+- Vlan 10 - IT
+- Vlan 20 - Management
+- Vlan 30 - Staff
+
+|code| 
+- enable
+- configure terminal 
+- vlan 10 
+- name IT 
+- vlan 20
+- name Management 
+- Vlan 30
+- name Staff
+
+this configuration creates three Vlans and asigns them names corresponding to deprtments within the organization.
 - unused ports disabled
 - Basic password security on Switches and Routers
 
