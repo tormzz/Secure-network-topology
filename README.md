@@ -134,14 +134,14 @@ Each VLAN receives its own gateway for comunication between networks.
 Basic password security was implemented on routers and switches to prevent unauthorized configuration access.
 * enable
 * conf t
-* password cisco
+* password 
 
 this ensures that only authorized adminstrators can manage network devices.
 
 - ## Banner MOTD
 A message of the day (motd) banner was configured to warn users that the system is restricted.
 
-* banner motd # only authorized users are able to access this router #
+* banner motd #
 
 This message appears whenever someone attempts to access the device.
 
@@ -171,6 +171,7 @@ All departments can communicate as intended, while maintaining proper isolation 
 - Inter-vlan routing
 - IP planning
 - Network troubleshooting and testing.
+- Port Security
 
 ## Lab File
 You can download the Cisco Packet Tracer lab file to try it yourself
