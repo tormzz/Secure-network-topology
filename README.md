@@ -160,6 +160,19 @@ The following checks were performed:
 - Disabled ports remain inactive
 - Login authentication and MOTD banner appear correctly
 
+- ## Port Security
+Port security allows the switch to limit the number of MAC addresses that can connect to a specific port. I configured each access port to allow only one device using sticky MAC learning. If another device tries to connect, the port automatically shuts down to protect the network.
+
+This improves internal network security and prevents unauthorized access at the access layer.
+
+Configuration Steps used:
+- interface fa0/1
+- switchport mode access
+- switchport port-security
+- switchport port-security maximum 1
+- switchport port-security mac-address sticky
+- switchport port-security violation shutdown
+
 
 
 ## Conclusion
